@@ -266,6 +266,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FBInjectableTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-Wl,-sectcreate,__DATA,FBInjectable,FBInjectableTest/FBInjectable";
 				PRODUCT_BUNDLE_IDENTIFIER = com.everettjf.FBInjectableTest;
@@ -278,6 +279,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FBInjectableTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-Wl,-sectcreate,__DATA,FBInjectable,FBInjectableTest/FBInjectable";
 				PRODUCT_BUNDLE_IDENTIFIER = com.everettjf.FBInjectableTest;
@@ -304,6 +306,7 @@
 				D137E0B21D5BA0A4006A145B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

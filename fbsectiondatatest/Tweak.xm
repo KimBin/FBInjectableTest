@@ -49,21 +49,21 @@ int main(int argc, char * argv[]);
 %hook FBNewsFeedViewController
 
 - (void)didTapPublishCheckInButton:(id)arg1{
-    // List all mach-o images in a process
+ 
+    
     const struct mach_header *mhp = _dyld_get_image_header(0);
+
     
     unsigned long size = 0;
     uint8_t *data = getsectiondata(mhp, "__DATA", "FBInjectable", & size);
-    const char *utf8data = (const char*)data;
-    
-    NSData *d = [NSData dataWithBytes:(const void *)utf8data length:72];
+    NSData *d = [NSData dataWithBytes:(const void *)data length:72];
     
     
     NSString *text = [NSString stringWithFormat:@"%@", d];
     NSLog(@"injectable text = %@", text);
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:text delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
-
+    
     
 }
 
