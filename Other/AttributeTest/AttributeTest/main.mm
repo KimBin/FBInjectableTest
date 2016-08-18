@@ -36,9 +36,9 @@ static myown_call mc2  __attribute__((unused, section("__DATA,myfunctions"))) = 
 static myown_call mc3  __attribute__((unused, section("__DATA,myfunctions"))) = mspec3;
 
 // const strings
-NSString * const kConstString1 __attribute((unused, section("__DATA,FBInjectable"))) = @"const string";
-NSString * const kConstString2 __attribute((unused, section("__DATA,FBInjectable"))) = @"const string";
-NSString * const kConstString3 __attribute((unused, section("__DATA,FBInjectable"))) = @"const string";
+const char * const kConstString1 __attribute((unused, section("__DATA,FBInjectable"))) = "const string 1";
+const char * const kConstString2 __attribute((unused, section("__DATA,FBInjectable"))) = "const string 2";
+const char * const kConstString3 __attribute((unused, section("__DATA,FBInjectable"))) = "const string 3";
 
 
 void call_functions_in_section(void)
@@ -70,9 +70,9 @@ int main(int argc, const char * argv[]) {
     call_functions_in_section();
     
     @autoreleasepool {
-        NSLog(@"string 1 = %@", kConstString1);
-        NSLog(@"string 2 = %@", kConstString2);
-        NSLog(@"string 3 = %@", kConstString3);
+        NSLog(@"string 1 = %s", kConstString1);
+        NSLog(@"string 2 = %s", kConstString2);
+        NSLog(@"string 3 = %s", kConstString3);
     }
     return 0;
 }
