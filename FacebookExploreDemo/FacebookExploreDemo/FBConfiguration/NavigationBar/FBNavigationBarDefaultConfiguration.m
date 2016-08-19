@@ -8,10 +8,12 @@
 
 #import "FBNavigationBarDefaultConfiguration.h"
 
+char * kFBNavigationBarDefaultConfiguration __attribute((unused, section("__DATA,FBInjectable"))) = "+[FBNavigationBarDefaultConfiguration(FBInjectable) fb_injectable]";
 
 @implementation FBNavigationBarDefaultConfiguration
 
 + (void)fb_injectable{
+    NSLog(@"%s",kFBNavigationBarDefaultConfiguration);
     return;
 }
 

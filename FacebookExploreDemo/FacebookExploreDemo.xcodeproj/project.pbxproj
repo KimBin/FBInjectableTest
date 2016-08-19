@@ -15,7 +15,6 @@
 		D137E1001D6609C5006A145B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D137E0FE1D6609C5006A145B /* LaunchScreen.storyboard */; };
 		D137E1101D667A6B006A145B /* FBIntegrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E10F1D667A6B006A145B /* FBIntegrationManager.m */; };
 		D137E11B1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E11A1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m */; };
-		D137E11E1D668DDF006A145B /* FBConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E11D1D668DDF006A145B /* FBConfiguration.m */; settings = {COMPILER_FLAGS = "-O0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +34,6 @@
 		D137E1151D667EF4006A145B /* FBNavigationBarConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBNavigationBarConfiguration.h; path = FBConfiguration/NavigationBar/FBNavigationBarConfiguration.h; sourceTree = "<group>"; };
 		D137E1191D667FCB006A145B /* FBNavigationBarDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBNavigationBarDefaultConfiguration.h; path = FBConfiguration/NavigationBar/FBNavigationBarDefaultConfiguration.h; sourceTree = "<group>"; };
 		D137E11A1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBNavigationBarDefaultConfiguration.m; path = FBConfiguration/NavigationBar/FBNavigationBarDefaultConfiguration.m; sourceTree = "<group>"; };
-		D137E11C1D668DDF006A145B /* FBConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBConfiguration.h; path = FBConfiguration/FBConfiguration.h; sourceTree = "<group>"; };
-		D137E11D1D668DDF006A145B /* FBConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBConfiguration.m; path = FBConfiguration/FBConfiguration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				D137E1181D667EF8006A145B /* NavigationBar */,
-				D137E11C1D668DDF006A145B /* FBConfiguration.h */,
-				D137E11D1D668DDF006A145B /* FBConfiguration.m */,
 			);
 			name = FBConfiguration;
 			sourceTree = "<group>";
@@ -161,6 +156,7 @@
 				TargetAttributes = {
 					D137E0EC1D6609C5006A145B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7ZFPU3E2FK;
 					};
 				};
 			};
@@ -204,7 +200,6 @@
 				D137E0F51D6609C5006A145B /* AppDelegate.m in Sources */,
 				D137E0F21D6609C5006A145B /* main.m in Sources */,
 				D137E1101D667A6B006A145B /* FBIntegrationManager.m in Sources */,
-				D137E11E1D668DDF006A145B /* FBConfiguration.m in Sources */,
 				D137E11B1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +312,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FacebookExploreDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.everettjf.FacebookExploreDemo;
@@ -328,6 +325,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FacebookExploreDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.everettjf.FacebookExploreDemo;

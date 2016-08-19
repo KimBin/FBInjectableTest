@@ -8,6 +8,8 @@
 
 #import "FBNavigationBarConfiguration.h"
 
+
+
 @interface FBNavigationBarDefaultConfiguration : NSObject<FBNavigationBarConfiguration>
 
 + (void)fb_injectable;
