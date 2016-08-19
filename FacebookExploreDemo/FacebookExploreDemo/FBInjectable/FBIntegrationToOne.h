@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define FBInjectableDATA __attribute((unused, section("__DATA,FBInjectable")))
+
 @protocol FBIntegrationToOne <NSObject>
 + (NSUInteger)integrationPriority;
 @end

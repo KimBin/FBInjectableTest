@@ -15,6 +15,8 @@
 		D137E1001D6609C5006A145B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D137E0FE1D6609C5006A145B /* LaunchScreen.storyboard */; };
 		D137E1101D667A6B006A145B /* FBIntegrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E10F1D667A6B006A145B /* FBIntegrationManager.m */; };
 		D137E11B1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E11A1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m */; };
+		D137E1221D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E1211D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m */; };
+		D137E1291D677CB2006A145B /* NoteDisplayDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E1281D677CB2006A145B /* NoteDisplayDefaultConfiguration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,12 @@
 		D137E1151D667EF4006A145B /* FBNavigationBarConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBNavigationBarConfiguration.h; path = FBConfiguration/NavigationBar/FBNavigationBarConfiguration.h; sourceTree = "<group>"; };
 		D137E1191D667FCB006A145B /* FBNavigationBarDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBNavigationBarDefaultConfiguration.h; path = FBConfiguration/NavigationBar/FBNavigationBarDefaultConfiguration.h; sourceTree = "<group>"; };
 		D137E11A1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBNavigationBarDefaultConfiguration.m; path = FBConfiguration/NavigationBar/FBNavigationBarDefaultConfiguration.m; sourceTree = "<group>"; };
+		D137E1201D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBTimelineActionBarDefaultConfiguration.h; path = FBConfiguration/TimelineActionBar/FBTimelineActionBarDefaultConfiguration.h; sourceTree = "<group>"; };
+		D137E1211D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBTimelineActionBarDefaultConfiguration.m; path = FBConfiguration/TimelineActionBar/FBTimelineActionBarDefaultConfiguration.m; sourceTree = "<group>"; };
+		D137E1231D677AFE006A145B /* FBTimelineActionBarConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBTimelineActionBarConfiguration.h; path = FBConfiguration/TimelineActionBar/FBTimelineActionBarConfiguration.h; sourceTree = "<group>"; };
+		D137E1271D677CB2006A145B /* NoteDisplayDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteDisplayDefaultConfiguration.h; path = FBConfiguration/NoteDisplayConfig/NoteDisplayDefaultConfiguration.h; sourceTree = "<group>"; };
+		D137E1281D677CB2006A145B /* NoteDisplayDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteDisplayDefaultConfiguration.m; path = FBConfiguration/NoteDisplayConfig/NoteDisplayDefaultConfiguration.m; sourceTree = "<group>"; };
+		D137E12A1D677CCC006A145B /* NoteDisplayConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteDisplayConfiguration.h; path = FBConfiguration/NoteDisplayConfig/NoteDisplayConfiguration.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,8 @@
 		D137E1111D667E67006A145B /* FBConfiguration */ = {
 			isa = PBXGroup;
 			children = (
+				D137E1261D677C49006A145B /* NoteDisplayConfig */,
+				D137E11F1D677AA2006A145B /* TimelineActionBar */,
 				D137E1181D667EF8006A145B /* NavigationBar */,
 			);
 			name = FBConfiguration;
@@ -123,6 +133,26 @@
 				D137E11A1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m */,
 			);
 			name = NavigationBar;
+			sourceTree = "<group>";
+		};
+		D137E11F1D677AA2006A145B /* TimelineActionBar */ = {
+			isa = PBXGroup;
+			children = (
+				D137E1201D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.h */,
+				D137E1211D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m */,
+				D137E1231D677AFE006A145B /* FBTimelineActionBarConfiguration.h */,
+			);
+			name = TimelineActionBar;
+			sourceTree = "<group>";
+		};
+		D137E1261D677C49006A145B /* NoteDisplayConfig */ = {
+			isa = PBXGroup;
+			children = (
+				D137E1271D677CB2006A145B /* NoteDisplayDefaultConfiguration.h */,
+				D137E1281D677CB2006A145B /* NoteDisplayDefaultConfiguration.m */,
+				D137E12A1D677CCC006A145B /* NoteDisplayConfiguration.h */,
+			);
+			name = NoteDisplayConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +186,7 @@
 				TargetAttributes = {
 					D137E0EC1D6609C5006A145B = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 7ZFPU3E2FK;
+						DevelopmentTeam = P6SS9DKN6Q;
 					};
 				};
 			};
@@ -199,6 +229,8 @@
 				D137E0F81D6609C5006A145B /* ViewController.m in Sources */,
 				D137E0F51D6609C5006A145B /* AppDelegate.m in Sources */,
 				D137E0F21D6609C5006A145B /* main.m in Sources */,
+				D137E1291D677CB2006A145B /* NoteDisplayDefaultConfiguration.m in Sources */,
+				D137E1221D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m in Sources */,
 				D137E1101D667A6B006A145B /* FBIntegrationManager.m in Sources */,
 				D137E11B1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m in Sources */,
 			);
@@ -263,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -301,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -315,6 +347,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FacebookExploreDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.everettjf.FacebookExploreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -328,6 +361,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FacebookExploreDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.everettjf.FacebookExploreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
