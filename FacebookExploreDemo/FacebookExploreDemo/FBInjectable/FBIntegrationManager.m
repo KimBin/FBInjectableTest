@@ -14,68 +14,50 @@
 
 #define InjectableSectionName "FBInjectable"
 
-static void adjustFBInjectableDataAddressASLR(){
-    Dl_info info;
-    dladdr(adjustFBInjectableDataAddressASLR, &info);
-    
-#ifndef __LP64__
-    const struct mach_header *mhp = (struct mach_header*)info.dli_fbase;
-    const struct section * sec = getsectbyname("__DATA", InjectableSectionName);
-    const char * memory = (const char *)( sec->offset + (uint32_t)mhp);
-    uint32_t aslr = (uint32_t)mhp - (sec->addr - sec->offset);
-    
-    uint32_t *memory32 = (uint32_t*)memory;
-    for(int idx = 0; idx < sec->size/sizeof(void*); ++idx){
-        memory32[idx] += aslr;
-    }
-    
-#else /* defined(__LP64__) */
-    
-    const struct mach_header_64 *mhp = (struct mach_header_64*)info.dli_fbase;
-    const struct section_64 * sec = getsectbyname("__DATA", InjectableSectionName);
-    const char * memory = (const char *)( sec->offset + (uint64_t)mhp);
-    
-    uint64_t aslr = (uint64_t)mhp - (sec->addr - sec->offset);
-    uint64_t *memory64 = (uint64_t*)memory;
-    for(int idx = 0; idx < sec->size/sizeof(void*); ++idx){
-        memory64[idx] += aslr;
-    }
-#endif /* defined(__LP64__) */
-    
-}
-
-static NSArray<NSString*>* readConfigurationClassNames(){
-    static NSArray<NSString*> *classNames;
+static NSArray<Class>* readConfigurationClasses(){
+    static NSMutableArray<Class> *classes;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        adjustFBInjectableDataAddressASLR();
-        
-        classNames = [NSArray new];
-        
         Dl_info info;
-        dladdr(adjustFBInjectableDataAddressASLR, &info);
+        dladdr(readConfigurationClasses, &info);
+        
 #ifndef __LP64__
         const struct mach_header *mhp = _dyld_get_image_header(0);
         unsigned long size = 0;
         uint8_t *memory = getsectiondata(mhp, "__DATA", InjectableSectionName, & size);
-        
 #else /* defined(__LP64__) */
         const struct mach_header_64 *mhp = (struct mach_header_64*)info.dli_fbase;
         unsigned long size = 0;
         uint64_t *memory = (uint64_t*)getsectiondata(mhp, "__DATA", InjectableSectionName, & size);
-        
-        for(int idx = 0; idx < size/sizeof(void*); ++idx){
-            uint64_t address = memory[idx];
-            char *string = (char*)address;
-            NSLog(@"string = %p , %s", string, string);
-        }
 #endif /* defined(__LP64__) */
         
-        NSLog(@"finish");
+        classes = [NSMutableArray new];
+        
+        for(int idx = 0; idx < size/sizeof(void*); ++idx){
+            char *string = (char*)memory[idx];
+            
+            NSString *str = [NSString stringWithUTF8String:string];
+            str = [str substringWithRange:NSMakeRange(2, str.length-3)];
+            NSArray<NSString*> *components = [str componentsSeparatedByString:@" "];
+            str = [components objectAtIndex:0];
+            if(!str)return;
+            
+            NSString *className;
+            NSRange range = [str rangeOfString:@"("];
+            if(range.length > 0){
+                className = [str substringToIndex:range.location];
+            }else{
+                className = str;
+            }
+            
+            NSLog(@"class name = %@", className);
+            Class cls = NSClassFromString(className);
+            if(cls) [classes addObject:cls];
+        }
     });
     
-    return classNames;
+    return classes;
 }
 
 @implementation FBIntegrationManager
@@ -90,13 +72,9 @@ static NSArray<NSString*>* readConfigurationClassNames(){
 }
 
 + (NSArray<Class>*)classesForProtocol_internal:(id)protocol{
-    NSArray<NSString*> *classNames = readConfigurationClassNames();
+    NSArray<Class> *allClasses = readConfigurationClasses();
+    NSLog(@"all classes = %@", allClasses);
     
-    NSArray<Class> *classes = [NSArray new];
-    for (NSString *className in classNames) {
-        
-    }
-    
-    return classes;
+    return allClasses;
 }
 @end
