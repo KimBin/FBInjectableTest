@@ -24,7 +24,8 @@
     
     Class config = [FBIntegrationManager classForProtocol:@protocol(NoteDisplayConfiguration)];
     
-    NSLog(@"%@",[config noteBackgroundColor]);
+    NSLog(@"cls = %@",config);
+    NSLog(@"color = %@",[config noteBackgroundColor]);
     
     return YES;
 }

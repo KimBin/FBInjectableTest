@@ -11,6 +11,9 @@
 #include <mach-o/loader.h>
 #include <mach-o/dyld.h>
 #include <dlfcn.h>
+#import <objc/runtime.h>
+#import <objc/message.h>
+#import "FBIntegrationToOne.h"
 
 #define InjectableSectionName "FBInjectable"
 
@@ -64,16 +67,39 @@ static NSArray<Class>* readConfigurationClasses(){
 
 + (Class)classForProtocol:(Protocol*)protocol{
     NSArray<Class> *classes = [self classesForProtocol_internal:protocol];
-    return classes.firstObject;
+    
+    Class result = NULL;
+    for (Class cls in classes) {
+        if(result == NULL){
+            result = cls;
+        }else{
+            NSUInteger priorityResult = [result integrationPriority];
+            NSUInteger priorityCurrent = [cls integrationPriority];
+            
+//            NSUInteger priorityResult = ((NSUInteger(*)())(void*)objc_msgSend)((id)result,@selector(integrationPriority));
+//            NSUInteger priorityCurrent = ((NSUInteger(*)())(void*)objc_msgSend)((id)cls,@selector(integrationPriority));
+            if(priorityResult < priorityCurrent){
+                result = cls;
+            }
+        }
+    }
+    return result;
 }
 
 + (NSArray<Class>*)classesForProtocol:(Protocol*)protocol{
     return [self classesForProtocol_internal:protocol];
 }
 
-+ (NSArray<Class>*)classesForProtocol_internal:(id)protocol{
++ (NSArray<Class>*)classesForProtocol_internal:(Protocol*)protocol{
     NSArray<Class> *allClasses = readConfigurationClasses();
     NSLog(@"all classes = %@", allClasses);
+    NSMutableArray<Class> *result = [NSMutableArray new];
+    
+    for (Class cls in allClasses) {
+        if(class_conformsToProtocol(cls, protocol)){
+            [result addObject:cls];
+        }
+    }
     
     return allClasses;
 }
