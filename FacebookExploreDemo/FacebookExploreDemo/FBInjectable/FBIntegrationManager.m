@@ -19,50 +19,27 @@ static void adjustFBInjectableDataAddressASLR(){
     dladdr(adjustFBInjectableDataAddressASLR, &info);
     
 #ifndef __LP64__
-    const struct mach_header *mhp = _dyld_get_image_header(0);
+    const struct mach_header *mhp = (struct mach_header*)info.dli_fbase;
     const struct section * sec = getsectbyname("__DATA", InjectableSectionName);
     const char * memory = (const char *)( sec->offset + (uint32_t)mhp);
-    unsigned long size = 0;
-    getsectiondata(mhp, "__DATA", InjectableSectionName, & size);
-    
-//    NSData *d = [NSData dataWithBytes:(const void *)memory length:72];
-//    NSString *text = [NSString stringWithFormat:@"%@", d];
-//    NSLog(@"memory text = %@", text);
+    uint32_t aslr = (uint32_t)mhp - (sec->addr - sec->offset);
     
     uint32_t *memory32 = (uint32_t*)memory;
-    for(int idx = 0; idx < size/sizeof(void*); ++idx){
-        memory32[idx] += (uint32_t)mhp;
+    for(int idx = 0; idx < sec->size/sizeof(void*); ++idx){
+        memory32[idx] += aslr;
     }
-    
-//    d = [NSData dataWithBytes:(const void *)memory length:72];
-//    text = [NSString stringWithFormat:@"%@", d];
-//    NSLog(@"memory text modified = %@", text);
     
 #else /* defined(__LP64__) */
     
     const struct mach_header_64 *mhp = (struct mach_header_64*)info.dli_fbase;
     const struct section_64 * sec = getsectbyname("__DATA", InjectableSectionName);
     const char * memory = (const char *)( sec->offset + (uint64_t)mhp);
-    unsigned long size = 0;
-    getsectiondata(mhp, "__DATA", InjectableSectionName, & size);
     
-    NSData *d;
-    NSString *text;
-    d = [NSData dataWithBytes:(const void *)memory length:size];
-    text = [NSString stringWithFormat:@"%@", d];
-    NSLog(@"memory text before = %@", text);
-    
-    
+    uint64_t aslr = (uint64_t)mhp - (sec->addr - sec->offset);
     uint64_t *memory64 = (uint64_t*)memory;
-    for(int idx = 0; idx < size/sizeof(void*); ++idx){
-        memory64[idx] += (uint64_t)mhp;
+    for(int idx = 0; idx < sec->size/sizeof(void*); ++idx){
+        memory64[idx] += aslr;
     }
-    
-    
-    d = [NSData dataWithBytes:(const void *)memory length:size];
-    text = [NSString stringWithFormat:@"%@", d];
-    NSLog(@"memory text modified = %@", text);
-    
 #endif /* defined(__LP64__) */
     
 }
@@ -91,10 +68,11 @@ static NSArray<NSString*>* readConfigurationClassNames(){
         for(int idx = 0; idx < size/sizeof(void*); ++idx){
             uint64_t address = memory[idx];
             char *string = (char*)address;
-            NSLog(@"string = %p", string);
+            NSLog(@"string = %p , %s", string, string);
         }
 #endif /* defined(__LP64__) */
         
+        NSLog(@"finish");
     });
     
     return classNames;
