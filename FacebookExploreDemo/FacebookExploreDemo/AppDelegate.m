@@ -23,7 +23,6 @@
     // Override point for customization after application launch.
     
     Class config = [FBIntegrationManager classForProtocol:@protocol(NoteDisplayConfiguration)];
-    
     NSLog(@"cls = %@",config);
     NSLog(@"color = %@",[config noteBackgroundColor]);
     

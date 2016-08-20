@@ -14,10 +14,10 @@
 		D137E0FD1D6609C5006A145B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D137E0FC1D6609C5006A145B /* Assets.xcassets */; };
 		D137E1001D6609C5006A145B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D137E0FE1D6609C5006A145B /* LaunchScreen.storyboard */; };
 		D137E1101D667A6B006A145B /* FBIntegrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E10F1D667A6B006A145B /* FBIntegrationManager.m */; };
-		D137E11B1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E11A1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m */; };
-		D137E1221D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E1211D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m */; };
-		D137E1291D677CB2006A145B /* NoteDisplayDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E1281D677CB2006A145B /* NoteDisplayDefaultConfiguration.m */; };
-		D187BE531D6857D5009216C8 /* NoteDisplayYellowConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D187BE521D6857D5009216C8 /* NoteDisplayYellowConfiguration.m */; };
+		D137E13C1D68D34B006A145B /* FBNavigationBarDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E1311D68D34B006A145B /* FBNavigationBarDefaultConfiguration.m */; };
+		D137E13D1D68D34B006A145B /* NoteDisplayDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E1351D68D34B006A145B /* NoteDisplayDefaultConfiguration.m */; };
+		D137E13E1D68D34B006A145B /* NoteDisplayYellowConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E1371D68D34B006A145B /* NoteDisplayYellowConfiguration.m */; };
+		D137E13F1D68D34B006A145B /* FBTimelineActionBarDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E13B1D68D34B006A145B /* FBTimelineActionBarDefaultConfiguration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,17 +34,17 @@
 		D137E10A1D6679AC006A145B /* FBIntegrationToOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBIntegrationToOne.h; path = FBInjectable/FBIntegrationToOne.h; sourceTree = "<group>"; };
 		D137E10E1D667A6B006A145B /* FBIntegrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBIntegrationManager.h; path = FBInjectable/FBIntegrationManager.h; sourceTree = "<group>"; };
 		D137E10F1D667A6B006A145B /* FBIntegrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBIntegrationManager.m; path = FBInjectable/FBIntegrationManager.m; sourceTree = "<group>"; };
-		D137E1151D667EF4006A145B /* FBNavigationBarConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBNavigationBarConfiguration.h; path = FBConfiguration/NavigationBar/FBNavigationBarConfiguration.h; sourceTree = "<group>"; };
-		D137E1191D667FCB006A145B /* FBNavigationBarDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBNavigationBarDefaultConfiguration.h; path = FBConfiguration/NavigationBar/FBNavigationBarDefaultConfiguration.h; sourceTree = "<group>"; };
-		D137E11A1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBNavigationBarDefaultConfiguration.m; path = FBConfiguration/NavigationBar/FBNavigationBarDefaultConfiguration.m; sourceTree = "<group>"; };
-		D137E1201D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBTimelineActionBarDefaultConfiguration.h; path = FBConfiguration/TimelineActionBar/FBTimelineActionBarDefaultConfiguration.h; sourceTree = "<group>"; };
-		D137E1211D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBTimelineActionBarDefaultConfiguration.m; path = FBConfiguration/TimelineActionBar/FBTimelineActionBarDefaultConfiguration.m; sourceTree = "<group>"; };
-		D137E1231D677AFE006A145B /* FBTimelineActionBarConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBTimelineActionBarConfiguration.h; path = FBConfiguration/TimelineActionBar/FBTimelineActionBarConfiguration.h; sourceTree = "<group>"; };
-		D137E1271D677CB2006A145B /* NoteDisplayDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteDisplayDefaultConfiguration.h; path = FBConfiguration/NoteDisplayConfig/NoteDisplayDefaultConfiguration.h; sourceTree = "<group>"; };
-		D137E1281D677CB2006A145B /* NoteDisplayDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteDisplayDefaultConfiguration.m; path = FBConfiguration/NoteDisplayConfig/NoteDisplayDefaultConfiguration.m; sourceTree = "<group>"; };
-		D137E12A1D677CCC006A145B /* NoteDisplayConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteDisplayConfiguration.h; path = FBConfiguration/NoteDisplayConfig/NoteDisplayConfiguration.h; sourceTree = "<group>"; };
-		D187BE511D6857D5009216C8 /* NoteDisplayYellowConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteDisplayYellowConfiguration.h; path = FBConfiguration/NoteDisplayConfig/NoteDisplayYellowConfiguration.h; sourceTree = "<group>"; };
-		D187BE521D6857D5009216C8 /* NoteDisplayYellowConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteDisplayYellowConfiguration.m; path = FBConfiguration/NoteDisplayConfig/NoteDisplayYellowConfiguration.m; sourceTree = "<group>"; };
+		D137E12F1D68D34B006A145B /* FBNavigationBarConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNavigationBarConfiguration.h; sourceTree = "<group>"; };
+		D137E1301D68D34B006A145B /* FBNavigationBarDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNavigationBarDefaultConfiguration.h; sourceTree = "<group>"; };
+		D137E1311D68D34B006A145B /* FBNavigationBarDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNavigationBarDefaultConfiguration.m; sourceTree = "<group>"; };
+		D137E1331D68D34B006A145B /* NoteDisplayConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteDisplayConfiguration.h; sourceTree = "<group>"; };
+		D137E1341D68D34B006A145B /* NoteDisplayDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteDisplayDefaultConfiguration.h; sourceTree = "<group>"; };
+		D137E1351D68D34B006A145B /* NoteDisplayDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteDisplayDefaultConfiguration.m; sourceTree = "<group>"; };
+		D137E1361D68D34B006A145B /* NoteDisplayYellowConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteDisplayYellowConfiguration.h; sourceTree = "<group>"; };
+		D137E1371D68D34B006A145B /* NoteDisplayYellowConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteDisplayYellowConfiguration.m; sourceTree = "<group>"; };
+		D137E1391D68D34B006A145B /* FBTimelineActionBarConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTimelineActionBarConfiguration.h; sourceTree = "<group>"; };
+		D137E13A1D68D34B006A145B /* FBTimelineActionBarDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTimelineActionBarDefaultConfiguration.h; sourceTree = "<group>"; };
+		D137E13B1D68D34B006A145B /* FBTimelineActionBarDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTimelineActionBarDefaultConfiguration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 		D137E0EF1D6609C5006A145B /* FacebookExploreDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D137E1111D667E67006A145B /* FBConfiguration */,
+				D137E12D1D68D34B006A145B /* Configuration */,
 				D137E1081D6678F5006A145B /* FBInjectable */,
 				D137E1071D6678ED006A145B /* App */,
 				D137E0F01D6609C5006A145B /* Supporting Files */,
@@ -118,46 +118,46 @@
 			name = FBInjectable;
 			sourceTree = "<group>";
 		};
-		D137E1111D667E67006A145B /* FBConfiguration */ = {
+		D137E12D1D68D34B006A145B /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				D137E1261D677C49006A145B /* NoteDisplayConfig */,
-				D137E11F1D677AA2006A145B /* TimelineActionBar */,
-				D137E1181D667EF8006A145B /* NavigationBar */,
+				D137E12E1D68D34B006A145B /* NavigationBar */,
+				D137E1321D68D34B006A145B /* NoteDisplayConfig */,
+				D137E1381D68D34B006A145B /* TimelineActionBar */,
 			);
-			name = FBConfiguration;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
-		D137E1181D667EF8006A145B /* NavigationBar */ = {
+		D137E12E1D68D34B006A145B /* NavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				D137E1151D667EF4006A145B /* FBNavigationBarConfiguration.h */,
-				D137E1191D667FCB006A145B /* FBNavigationBarDefaultConfiguration.h */,
-				D137E11A1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m */,
+				D137E12F1D68D34B006A145B /* FBNavigationBarConfiguration.h */,
+				D137E1301D68D34B006A145B /* FBNavigationBarDefaultConfiguration.h */,
+				D137E1311D68D34B006A145B /* FBNavigationBarDefaultConfiguration.m */,
 			);
-			name = NavigationBar;
+			path = NavigationBar;
 			sourceTree = "<group>";
 		};
-		D137E11F1D677AA2006A145B /* TimelineActionBar */ = {
+		D137E1321D68D34B006A145B /* NoteDisplayConfig */ = {
 			isa = PBXGroup;
 			children = (
-				D137E1201D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.h */,
-				D137E1211D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m */,
-				D137E1231D677AFE006A145B /* FBTimelineActionBarConfiguration.h */,
+				D137E1331D68D34B006A145B /* NoteDisplayConfiguration.h */,
+				D137E1341D68D34B006A145B /* NoteDisplayDefaultConfiguration.h */,
+				D137E1351D68D34B006A145B /* NoteDisplayDefaultConfiguration.m */,
+				D137E1361D68D34B006A145B /* NoteDisplayYellowConfiguration.h */,
+				D137E1371D68D34B006A145B /* NoteDisplayYellowConfiguration.m */,
 			);
-			name = TimelineActionBar;
+			path = NoteDisplayConfig;
 			sourceTree = "<group>";
 		};
-		D137E1261D677C49006A145B /* NoteDisplayConfig */ = {
+		D137E1381D68D34B006A145B /* TimelineActionBar */ = {
 			isa = PBXGroup;
 			children = (
-				D137E1271D677CB2006A145B /* NoteDisplayDefaultConfiguration.h */,
-				D137E1281D677CB2006A145B /* NoteDisplayDefaultConfiguration.m */,
-				D137E12A1D677CCC006A145B /* NoteDisplayConfiguration.h */,
-				D187BE511D6857D5009216C8 /* NoteDisplayYellowConfiguration.h */,
-				D187BE521D6857D5009216C8 /* NoteDisplayYellowConfiguration.m */,
+				D137E1391D68D34B006A145B /* FBTimelineActionBarConfiguration.h */,
+				D137E13A1D68D34B006A145B /* FBTimelineActionBarDefaultConfiguration.h */,
+				D137E13B1D68D34B006A145B /* FBTimelineActionBarDefaultConfiguration.m */,
 			);
-			name = NoteDisplayConfig;
+			path = TimelineActionBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,12 +233,12 @@
 			files = (
 				D137E0F81D6609C5006A145B /* ViewController.m in Sources */,
 				D137E0F51D6609C5006A145B /* AppDelegate.m in Sources */,
+				D137E13E1D68D34B006A145B /* NoteDisplayYellowConfiguration.m in Sources */,
+				D137E13F1D68D34B006A145B /* FBTimelineActionBarDefaultConfiguration.m in Sources */,
 				D137E0F21D6609C5006A145B /* main.m in Sources */,
-				D137E1291D677CB2006A145B /* NoteDisplayDefaultConfiguration.m in Sources */,
-				D137E1221D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m in Sources */,
+				D137E13D1D68D34B006A145B /* NoteDisplayDefaultConfiguration.m in Sources */,
 				D137E1101D667A6B006A145B /* FBIntegrationManager.m in Sources */,
-				D187BE531D6857D5009216C8 /* NoteDisplayYellowConfiguration.m in Sources */,
-				D137E11B1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m in Sources */,
+				D137E13C1D68D34B006A145B /* FBNavigationBarDefaultConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
