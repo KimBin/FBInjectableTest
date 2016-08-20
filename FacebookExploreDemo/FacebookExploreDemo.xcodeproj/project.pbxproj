@@ -17,6 +17,7 @@
 		D137E11B1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E11A1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m */; };
 		D137E1221D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E1211D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m */; };
 		D137E1291D677CB2006A145B /* NoteDisplayDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D137E1281D677CB2006A145B /* NoteDisplayDefaultConfiguration.m */; };
+		D187BE531D6857D5009216C8 /* NoteDisplayYellowConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D187BE521D6857D5009216C8 /* NoteDisplayYellowConfiguration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		D137E1271D677CB2006A145B /* NoteDisplayDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteDisplayDefaultConfiguration.h; path = FBConfiguration/NoteDisplayConfig/NoteDisplayDefaultConfiguration.h; sourceTree = "<group>"; };
 		D137E1281D677CB2006A145B /* NoteDisplayDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteDisplayDefaultConfiguration.m; path = FBConfiguration/NoteDisplayConfig/NoteDisplayDefaultConfiguration.m; sourceTree = "<group>"; };
 		D137E12A1D677CCC006A145B /* NoteDisplayConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteDisplayConfiguration.h; path = FBConfiguration/NoteDisplayConfig/NoteDisplayConfiguration.h; sourceTree = "<group>"; };
+		D187BE511D6857D5009216C8 /* NoteDisplayYellowConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteDisplayYellowConfiguration.h; path = FBConfiguration/NoteDisplayConfig/NoteDisplayYellowConfiguration.h; sourceTree = "<group>"; };
+		D187BE521D6857D5009216C8 /* NoteDisplayYellowConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteDisplayYellowConfiguration.m; path = FBConfiguration/NoteDisplayConfig/NoteDisplayYellowConfiguration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 				D137E1271D677CB2006A145B /* NoteDisplayDefaultConfiguration.h */,
 				D137E1281D677CB2006A145B /* NoteDisplayDefaultConfiguration.m */,
 				D137E12A1D677CCC006A145B /* NoteDisplayConfiguration.h */,
+				D187BE511D6857D5009216C8 /* NoteDisplayYellowConfiguration.h */,
+				D187BE521D6857D5009216C8 /* NoteDisplayYellowConfiguration.m */,
 			);
 			name = NoteDisplayConfig;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				D137E1291D677CB2006A145B /* NoteDisplayDefaultConfiguration.m in Sources */,
 				D137E1221D677AC4006A145B /* FBTimelineActionBarDefaultConfiguration.m in Sources */,
 				D137E1101D667A6B006A145B /* FBIntegrationManager.m in Sources */,
+				D187BE531D6857D5009216C8 /* NoteDisplayYellowConfiguration.m in Sources */,
 				D137E11B1D667FCB006A145B /* FBNavigationBarDefaultConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

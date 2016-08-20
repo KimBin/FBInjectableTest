@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "FBIntegrationManager.h"
+#import "NoteDisplayConfiguration.h"
+#import "FBIntegrationManager.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +21,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    Class config = [FBIntegrationManager classForProtocol:@protocol(NoteDisplayConfiguration)];
+    
+    NSLog(@"%@",[config noteBackgroundColor]);
+    
     return YES;
 }
 

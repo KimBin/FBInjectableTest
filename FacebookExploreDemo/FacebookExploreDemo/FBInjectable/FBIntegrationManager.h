@@ -10,7 +10,7 @@
 
 @interface FBIntegrationManager : NSObject
 
-+ (Class)classForProtocol:(id)protocol;
-+ (NSArray<Class>*)classesForProtocol:(id)protocol;
++ (Class)classForProtocol:(Protocol*)protocol;
++ (NSArray<Class>*)classesForProtocol:(Protocol*)protocol;
 
 @end

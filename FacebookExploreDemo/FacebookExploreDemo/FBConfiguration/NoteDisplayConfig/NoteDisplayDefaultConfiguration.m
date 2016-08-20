@@ -8,6 +8,23 @@
 
 #import "NoteDisplayDefaultConfiguration.h"
 
+
+char * kNoteDisplayDefaultConfiguration FBInjectableDATA = "+[NoteDisplayDefaultConfiguration(FBInjectable) fb_injectable]";
+
 @implementation NoteDisplayDefaultConfiguration
+
++ (void)fb_injectable{
+    printf("%s",kNoteDisplayDefaultConfiguration);
+}
++ (NSUInteger)integrationPriority{
+    return 0;
+}
+
++ (BOOL)showDeleteButton{
+    return YES;
+}
++ (UIColor *)noteBackgroundColor{
+    return [UIColor blackColor];
+}
 
 @end

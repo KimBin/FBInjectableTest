@@ -6,8 +6,14 @@
 //  Copyright © 2016年 everettjf. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NoteDisplayConfiguration.h"
 
-@interface NoteDisplayDefaultConfiguration : NSObject
+@interface NoteDisplayDefaultConfiguration : NSObject<NoteDisplayConfiguration>
+
++ (void)fb_injectable;
++ (NSUInteger)integrationPriority;
+
++ (BOOL)showDeleteButton;
++ (UIColor *)noteBackgroundColor;
 
 @end

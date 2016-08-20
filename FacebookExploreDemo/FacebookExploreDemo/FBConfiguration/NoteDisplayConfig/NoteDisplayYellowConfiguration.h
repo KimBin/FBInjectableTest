@@ -1,16 +1,14 @@
 //
-//  NoteDisplayConfiguration.h
+//  NoteDisplayYellowConfiguration.h
 //  FacebookExploreDemo
 //
 //  Created by everettjf on 16/8/20.
 //  Copyright © 2016年 everettjf. All rights reserved.
 //
 
-#import "FBIntegrationToOne.h"
+#import "NoteDisplayConfiguration.h"
 
-#import <UIKit/UIKit.h>
-
-@protocol NoteDisplayConfiguration<FBIntegrationToOne>
+@interface NoteDisplayYellowConfiguration : NSObject<NoteDisplayConfiguration>
 
 + (BOOL)showDeleteButton;
 + (UIColor *)noteBackgroundColor;
