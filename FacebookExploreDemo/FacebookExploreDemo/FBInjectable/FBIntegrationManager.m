@@ -73,12 +73,7 @@ static NSArray<Class>* readConfigurationClasses(){
         if(result == NULL){
             result = cls;
         }else{
-            NSUInteger priorityResult = [result integrationPriority];
-            NSUInteger priorityCurrent = [cls integrationPriority];
-            
-//            NSUInteger priorityResult = ((NSUInteger(*)())(void*)objc_msgSend)((id)result,@selector(integrationPriority));
-//            NSUInteger priorityCurrent = ((NSUInteger(*)())(void*)objc_msgSend)((id)cls,@selector(integrationPriority));
-            if(priorityResult < priorityCurrent){
+            if([result integrationPriority] < [cls integrationPriority]){
                 result = cls;
             }
         }
