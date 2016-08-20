@@ -354,6 +354,14 @@
 				INFOPLIST_FILE = FacebookExploreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-Wl,-rename_section,__TEXT,__cstring,__RODATA,__cstring",
+					"-Wl,-rename_section,__TEXT,__gcc_except_tab,__RODATA,__gcc_except_tab",
+					"-Wl,-rename_section,__TEXT,__const,__RODATA,__const",
+					"-Wl,-rename_section,__TEXT,__objc_methname,__RODATA,__objc_methname",
+					"-Wl,-rename_section,__TEXT,__objc_classname,__RODATA,__objc_classname",
+					"-Wl,-rename_section,__TEXT,__objc_methtype,__RODATA,__objc_methtype",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.everettjf.FacebookExploreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -368,6 +376,14 @@
 				INFOPLIST_FILE = FacebookExploreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-Wl,-rename_section,__TEXT,__cstring,__RODATA,__cstring",
+					"-Wl,-rename_section,__TEXT,__gcc_except_tab,__RODATA,__gcc_except_tab",
+					"-Wl,-rename_section,__TEXT,__const,__RODATA,__const",
+					"-Wl,-rename_section,__TEXT,__objc_methname,__RODATA,__objc_methname",
+					"-Wl,-rename_section,__TEXT,__objc_classname,__RODATA,__objc_classname",
+					"-Wl,-rename_section,__TEXT,__objc_methtype,__RODATA,__objc_methtype",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.everettjf.FacebookExploreDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
