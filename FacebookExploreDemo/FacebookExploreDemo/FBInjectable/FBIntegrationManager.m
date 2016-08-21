@@ -26,10 +26,10 @@ static NSArray<Class>* readConfigurationClasses(){
         dladdr(readConfigurationClasses, &info);
         
 #ifndef __LP64__
-//        const struct mach_header *mhp1 = _dyld_get_image_header(0);
+//        const struct mach_header *mhp = _dyld_get_image_header(0); // both works as below line
         const struct mach_header *mhp = (struct mach_header*)info.dli_fbase;
         unsigned long size = 0;
-        uint8_t *memory = getsectiondata(mhp, "__DATA", InjectableSectionName, & size);
+        uint32_t *memory = (uint32_t*)getsectiondata(mhp, "__DATA", InjectableSectionName, & size);
 #else /* defined(__LP64__) */
         const struct mach_header_64 *mhp = (struct mach_header_64*)info.dli_fbase;
         unsigned long size = 0;
