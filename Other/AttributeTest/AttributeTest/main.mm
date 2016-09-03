@@ -31,9 +31,9 @@ static void mspec3(void)
 }
 
 
-static myown_call mc1  __attribute__((unused, section("__DATA,myfunctions"))) = mspec1;
-static myown_call mc2  __attribute__((unused, section("__DATA,myfunctions"))) = mspec2;
-static myown_call mc3  __attribute__((unused, section("__DATA,myfunctions"))) = mspec3;
+static myown_call mc1  __attribute__((used, section("__DATA,myfunctions"))) = mspec1;
+static myown_call mc2  __attribute__((used, section("__DATA,myfunctions"))) = mspec2;
+static myown_call mc3  __attribute__((used, section("__DATA,myfunctions"))) = mspec3;
 
 // const strings
 char * kString1 __attribute((unused, section("__DATA,FBInjectable"))) = "string 1";
