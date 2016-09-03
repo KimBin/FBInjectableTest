@@ -62,7 +62,7 @@ void call_functions_in_section(void)
     
     printf("size &mc1 : %lu\n", sizeof(&mc1));
     printf("size mc1 : %lu\n", sizeof(mc1));
-    printf("size const string : %lu\n", sizeof(kConstString1));
+    printf("size const string : %lu\n", sizeof(kString1));
 }
 
 int main(int argc, const char * argv[]) {
@@ -72,6 +72,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"string 1 = %s", kString1);
         NSLog(@"string 2 = %s", kString2);
         NSLog(@"string 3 = %s", kString3);
+        
     }
     return 0;
 }

@@ -13,7 +13,6 @@ char * kNoteDisplayYellowConfiguration FBInjectableDATA = "+[NoteDisplayYellowCo
 @implementation NoteDisplayYellowConfiguration
 
 + (void)fb_injectable{
-    printf("%s",kNoteDisplayYellowConfiguration);
 }
 + (NSUInteger)integrationPriority{
     return 1;

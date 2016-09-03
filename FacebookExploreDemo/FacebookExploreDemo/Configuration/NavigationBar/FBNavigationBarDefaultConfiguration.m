@@ -13,7 +13,6 @@ char * kFBNavigationBarDefaultConfiguration FBInjectableDATA = "+[FBNavigationBa
 @implementation FBNavigationBarDefaultConfiguration
 
 + (void)fb_injectable{
-    printf("%s",kFBNavigationBarDefaultConfiguration);
 }
 
 + (NSUInteger)integrationPriority{

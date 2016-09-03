@@ -14,7 +14,6 @@ char * kNoteDisplayDefaultConfiguration FBInjectableDATA = "+[NoteDisplayDefault
 @implementation NoteDisplayDefaultConfiguration
 
 + (void)fb_injectable{
-    printf("%s",kNoteDisplayDefaultConfiguration);
 }
 + (NSUInteger)integrationPriority{
     return 0;

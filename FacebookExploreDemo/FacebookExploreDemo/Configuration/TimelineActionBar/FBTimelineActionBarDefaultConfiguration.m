@@ -13,7 +13,6 @@ char * kFBTimelineActionBarDefaultConfiguration FBInjectableDATA = "+[FBTimeline
 @implementation FBTimelineActionBarDefaultConfiguration
 
 + (void)fb_injectable{
-    printf("%s",kFBTimelineActionBarDefaultConfiguration);
 }
 
 + (NSUInteger)integrationPriority{
